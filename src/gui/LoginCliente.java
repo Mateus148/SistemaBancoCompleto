@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Mateus Moura
@@ -119,12 +121,12 @@ public class LoginCliente extends javax.swing.JFrame {
 
     private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
 
-        //if(txtNomeCliente.getText().equals("admin") && txtSenha.getText().equals("admin")){  //getPassword
-            //gui.Menu menu = new gui.Menu();
-            //menu.setVisible(true);
-        //} else{
-            //JOptionPane.showMessageDialog(null, "Acesso Negado!");
-        //}
+        if(txtNomeCliente.getText().equals("admin") && txtSenha1.getText().equals("admin") && txtNumeroConta.getText().equals("001")){  //getPassword
+            gui.AreaCliente ac = new gui.AreaCliente();
+            ac.setVisible(true);
+        } else{
+            JOptionPane.showMessageDialog(null, "Acesso Negado!");
+        }
     }//GEN-LAST:event_btEntrarActionPerformed
 
     /**
